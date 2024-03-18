@@ -6,29 +6,28 @@ import altair as alt
 
 st.set_page_config(page_title="Dreamer's & Make-Believers", page_icon="📚", layout="centered")
 
-  #image2 = Image.open('Recommendation.jpg')
-  #st.image(image2)
+#image2 = Image.open('Recommendation.jpg')
+#st.image(image2)
 st.write("Fill in at least 3 fields for the best results")
 st.divider()
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-  question1 = st.selectbox("**Fiction or Non-Fiction?**",
-            ('','Fiction', 'Nonfiction'))
-  question7= st.multiselect("**LGBT Identities Present**",
-            ['MLM', 'WLW', 'Nonbinary','Transgender','Asexual','Aromantic', 'Multi-Gender Attracted', 'Any LGBT+'], [])
+  question1 = st.selectbox("**Fiction or NonFiction?**",
+            ('','Fiction', 'Non-Fiction'))
+  question7= st.multiselect("**What kind of media**",
+            ['Prose', 'Poetry', 'Anthology'], [])
 with col2:
-  question4 = st.multiselect("**Main Character (for fiction only)**",
-               ['Male (includes ftm)','Female (includes mtf)','Non-Binary'], [])
-  question5 = st.selectbox("**Book Length**",
-               ('','Very Short Read (<150 pages)','Short Read (150-250 pages)','Average Read (250-350 pages)', 
-                'Long Read (350-425 pages)','Very Long Read (>425 pages)'))
+  question4 = st.multiselect("**Misc Collections**",
+               ['Local Spotlight','Superhero','#TransRightsReadathon','Humor','Media Tie Ins'], [])
+  question5 = st.selectbox("**LGBT Representation**",
+               ('','Queer','#TransRightsReadathon'))
 with col3:
-  question3 = st.multiselect("**Genre (for fiction only)**",
-            ['Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror'], [])
+  question3 = st.multiselect("**Genre**",
+            ['Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'], [])
   question6 = st.multiselect("**Target Reader Age**",
-            ['Adult','YA'], [])
+            ['Adult','Kids'], [])
  
 button_books = st.button("Get Books")
 
