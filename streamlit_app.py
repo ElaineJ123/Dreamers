@@ -10,7 +10,6 @@ image1 = Image.open('Logo.jpeg')
 st.image(image1)
 st.divider()
 st.write("This system will always give you the 10 closet matches to what you enter (It's not a filter)")
-st.write("Fill in at least 3 fields for the best results😄")
 st.divider()
 
 col1, col2, col3 = st.columns(3)
