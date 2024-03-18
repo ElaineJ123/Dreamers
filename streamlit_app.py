@@ -81,27 +81,27 @@ input_dict = {
 input_df = pd.DataFrame(input_dict, index=[0])
   
 #start prediction code
-#df_model = pd.read_csv('df_model.csv')
+df_model = pd.read_csv('df_model.csv')
   
-#features = df_model[['fiction','fiction2','genre_fantasy', 'genre_romance',
- #                 'genre_sci-fi', 'genre_historical','genre_horror','genre_mystery', 'genre_nf','genre_nf2','reader_adult', 'reader_ya',
-  #                'lgbt_wlw', 'lgbt_mlm','lgbt_nonb', 'lgbt_trans', 'lgbt_ace', 'lgbt_aro', 'lgbt_mga', 'mc_male', 'mc_female','mc_nb', 'read_vs',
-   #               'read_s', 'read_a','read_l','read_vl']].values
+features = df_model[['media_prose', 'media_poetry', 'media_anthology', 'audience_kids', 'audience_adults', 
+               'genre_fantasy', 'genre_horror', 'genre_romance', 'genre_drama', 'genre_historical', 'genre_scifi', 
+               'genre_mystery', 'lbgt_rep', 'nonfiction', 'misc_local', 'misc_hero', 'misc_trans', 'misc_humor', 
+               'misc_mediatiein']].values
 
-#knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
-#knn.fit(features)  # get the model
-#selected_book = input_df.values.tolist()
-#distances, indices = knn.kneighbors(selected_book)
+knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
+knn.fit(features)  # get the model
+selected_book = input_df.values.tolist()
+distances, indices = knn.kneighbors(selected_book)
  
-#nearest_neighbors_distances = distances[0]
-#nearest_neighbors_data = df_model.iloc[indices[0]]
+nearest_neighbors_distances = distances[0]
+nearest_neighbors_data = df_model.iloc[indices[0]]
   
 if button_books:
   st.write("It works :) ")
   st.write(input_df)
-  #for i, (title, book_id, distance, author, summary, info) in enumerate(zip(nearest_neighbors_data['title'], nearest_neighbors_data['book_id'], nearest_neighbors_distances, nearest_neighbors_data['author'], nearest_neighbors_data['summary'], nearest_neighbors_data['info'])):
-   # st.header(f" Match {i + 1}: ")
-    #st.subheader(f"{title} \n_By: {author}_")
-  #  st.write(f"{info}")
-   # st.write(f"{summary}")
-   # st.write(" ")
+  for i, (Title, URL, distance, Summary, Collections, Price) in enumerate(zip(nearest_neighbors_data['Title'], nearest_neighbors_data['URL'], nearest_neighbors_distances, nearest_neighbors_data['Summary'], nearest_neighbors_data['Collections'], nearest_neighbors_data['Price'])):
+    st.header(f" Match {i + 1}: ")
+    st.subheader(f"{Title} \n_Link: {URL}_")
+    st.write(f"{Collections} {Price}")
+    st.write(f"{Summary}")
+    st.write(" ")
