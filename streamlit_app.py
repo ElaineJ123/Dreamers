@@ -8,13 +8,15 @@ st.set_page_config(page_title="Dreamer's & Make-Believers", page_icon="📚", la
 
 image1 = Image.open('Logo.jpeg')
 st.image(image1)
-st.write("Fill in at least 3 fields for the best results")
+st.divider()
+st.write("This system will always give you the 10 closet matches to what you enter (It's not a filter)")
+st.write("Fill in at least 3 fields for the best results😄")
 st.divider()
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-  question7= st.multiselect("**What kind of media**",
+  question7= st.multiselect("**What kind of media?**",
             ['Prose', 'Poetry', 'Anthology'], [])
   question6 = st.selectbox("**Target Reader Age**",
             ('','Adult','Kids'))
@@ -97,11 +99,9 @@ nearest_neighbors_distances = distances[0]
 nearest_neighbors_data = df_model.iloc[indices[0]]
   
 if button_books:
-  st.write("It works :) ")
-  st.write(input_df)
   for i, (Title, URL, distance, Summary, Collections, Price) in enumerate(zip(nearest_neighbors_data['Title'], nearest_neighbors_data['URL'], nearest_neighbors_distances, nearest_neighbors_data['Summary'], nearest_neighbors_data['Collections'], nearest_neighbors_data['Price'])):
     st.header(f" Match {i + 1}: ")
-    st.subheader(f"{Title} \n_Link: {URL}_")
-    st.write(f"{Collections} {Price}")
+    st.subheader(f"{Title} \n_{URL}_ {Price}")
+    st.write(f"{Collections}")
     st.write(f"{Summary}")
     st.write(" ")
