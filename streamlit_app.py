@@ -40,7 +40,7 @@ media_anthology = 1 if question7 == 'Anthology' else 0
 audience_kids = 1 if question6 =='Kids' else 0
 audience_adults = 1 if question6 =='Adult' else 0
 nonfiction = 1 if question1 =='Non-fiction' else 0
-lbgt_rep = 1 if any(item in ['Queer', '#TransRightsReadathon'] for item in question5) else 0
+lgbt_rep = 1 if any(item in ['Queer', '#TransRightsReadathon'] for item in question5) else 0
 genre_fantasy = 1 if question3 =='Fantasy' else 0
 genre_horror = 1 if question3 =='Horror' else 0
 genre_romance = 1 if question3 =='Romance' else 0
@@ -69,7 +69,7 @@ input_dict = {
   'genre_historical': genre_historical,
   'genre_scifi':genre_scifi,
   'genre_mystery': genre_mystery,
-  'lbgt_rep':lgbt_rep,
+  'lgbt_rep':lgbt_rep,
   'nonfiction':nonfiction,
   'misc_local':misc_local,
   'misc_hero':misc_hero,
