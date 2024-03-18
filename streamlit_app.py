@@ -61,7 +61,7 @@ input_dict = {
   'media_poetry': media_poetry, 
   'media_anthology': media_anthology, 
   'audience_kids':audience_kids, 
-  'audience_adults':audience:adults, 
+  'audience_adults':audience_adults, 
   'genre_fantasy': genre_fantasy, 
   'genre_horror': genre_horror, 
   'genre_romance': genre:romance, 
