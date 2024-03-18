@@ -6,7 +6,7 @@ import altair as alt
 
 st.set_page_config(page_title="Dreamer's & Make-Believers", page_icon="📚", layout="centered")
 
-image1 = Image.open('Logo.jpg')
+image1 = Image.open('Logo.jpeg')
 st.image(image1)
 st.write("Fill in at least 3 fields for the best results")
 st.divider()
