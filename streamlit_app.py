@@ -64,7 +64,7 @@ input_dict = {
   'audience_adults':audience_adults, 
   'genre_fantasy': genre_fantasy, 
   'genre_horror': genre_horror, 
-  'genre_romance': genre:romance, 
+  'genre_romance': genre_romance, 
   'genre_drama': genre_drama,
   'genre_historical': genre_historical,
   'genre_scifi':genre_scifi,
