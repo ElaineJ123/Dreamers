@@ -50,7 +50,7 @@ genre_scifi = 1 if 'Sci-Fi' in question3 else 0
 genre_mystery = 1 if 'Mystery' in question3 else 0
 misc_local = 1 if 'Local Spotlight' in question4 else 0
 misc_hero = 1 if 'Superhero' in question4 else 0
-misc_trans  = 1 if '#TransRightsReadathon' in question4 else 0
+misc_trans  = 1 if '#TransRightsReadathon' in question5 else 0
 misc_humor = 1 if 'Humor' in question4 else 0
 misc_mediatiein  = 1 if 'Media Tie Ins' in question4 else 0
 
