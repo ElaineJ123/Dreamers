@@ -14,20 +14,21 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-  question1 = st.selectbox("**Fiction or NonFiction?**",
-            ('','Fiction', 'Non-Fiction'))
   question7= st.multiselect("**What kind of media**",
             ['Prose', 'Poetry', 'Anthology'], [])
+    question6 = st.selectbox("**Target Reader Age**",
+            ('','Adult','Kids'))
 with col2:
-  question4 = st.multiselect("**Misc Collections**",
-               ['Local Spotlight','Superhero','#TransRightsReadathon','Humor','Media Tie Ins'], [])
+  question1 = st.selectbox("**Fiction or NonFiction?**",
+            ('','Fiction', 'Non-Fiction'))
   question5 = st.multiselect("**LGBT Representation**",
                ['Queer','#TransRightsReadathon'],[])
 with col3:
   question3 = st.multiselect("**Genre**",
             ['Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'], [])
-  question6 = st.selectbox("**Target Reader Age**",
-            ('','Adult','Kids'))
+  question4 = st.multiselect("**Misc Collections**",
+               ['Local Spotlight','Superhero','#TransRightsReadathon','Humor','Media Tie Ins'], [])
+
  
 button_books = st.button("Get Books")
 
