@@ -34,25 +34,25 @@ button_books = st.button("Get Books")
 st.divider()
 
   # Update values for recommendation
-media_prose = 1 if question7 == 'Prose' else 0
-media_poetry = 1 if question7 == 'Poetry' else 0
-media_anthology = 1 if question7 == 'Anthology' else 0
+media_prose = 1 if 'Prose' in question7 else 0
+media_poetry = 1 if 'Poetry' in question7 else 0
+media_anthology = 1 if 'Anthology' in question7 else 0
 audience_kids = 1 if question6 =='Kids' else 0
 audience_adults = 1 if question6 =='Adult' else 0
 nonfiction = 1 if question1 =='Non-fiction' else 0
 lgbt_rep = 1 if any(item in ['Queer', '#TransRightsReadathon'] for item in question5) else 0
-genre_fantasy = 1 if question3 =='Fantasy' else 0
-genre_horror = 1 if question3 =='Horror' else 0
-genre_romance = 1 if question3 =='Romance' else 0
-genre_drama = 1 if question3 =='Drama' else 0
-genre_historical = 1 if question3 =='Historical' else 0
-genre_scifi = 1 if question3 =='Sci-Fi' else 0
-genre_mystery = 1 if question3 =='Mystery' else 0
-misc_local = 1 if question4=='Local Spotlight' else 0
-misc_hero = 1 if question4=='Superhero' else 0
-misc_trans = 1 if question1=='#TransRightsReadathon' else 0
-misc_humor = 1 if question4=='Humor' else 0
-misc_mediatiein = 1 if question4=='Media Tie Ins' else 0
+genre_fantasy = 1 if 'Fantasy' in question3 else 0
+genre_horror = 1 if 'Horror' in question3 else 0
+genre_romance = 1 if 'Romance' in question3 else 0
+genre_drama = 1 if 'Drama' in question3 else 0
+genre_historical = 1 if 'Historical' in question3 else 0
+genre_scifi = 1 if 'Sci-Fi' in question3 else 0
+genre_mystery = 1 if 'Mystery' in question3 else 0
+misc_local = 1 if 'Local Spotlight' in question4 else 0
+misc_hero = 1 if 'Superhero' in question4 else 0
+misc_trans  = 1 if '#TransRightsReadathon' in question4 else 0
+misc_humor = 1 if 'Humor' in question4 else 0
+misc_mediatiein  = 1 if 'Media Tie Ins' in question4 else 0
 
   
   #make dictionary with input values
