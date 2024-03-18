@@ -6,8 +6,8 @@ import altair as alt
 
 st.set_page_config(page_title="Dreamer's & Make-Believers", page_icon="📚", layout="centered")
 
-#image2 = Image.open('Recommendation.jpg')
-#st.image(image2)
+image1 = Image.open('Logo.jpg')
+st.image(image1)
 st.write("Fill in at least 3 fields for the best results")
 st.divider()
 
@@ -21,13 +21,13 @@ with col1:
 with col2:
   question4 = st.multiselect("**Misc Collections**",
                ['Local Spotlight','Superhero','#TransRightsReadathon','Humor','Media Tie Ins'], [])
-  question5 = st.selectbox("**LGBT Representation**",
-               ('','Queer','#TransRightsReadathon'))
+  question5 = st.multiselect("**LGBT Representation**",
+               ['Queer','#TransRightsReadathon'],[])
 with col3:
   question3 = st.multiselect("**Genre**",
             ['Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'], [])
-  question6 = st.multiselect("**Target Reader Age**",
-            ['Adult','Kids'], [])
+  question6 = st.selectbox("**Target Reader Age**",
+            ('','Adult','Kids'))
  
 button_books = st.button("Get Books")
 
