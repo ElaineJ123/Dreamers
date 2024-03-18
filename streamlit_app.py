@@ -16,7 +16,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
   question7= st.multiselect("**What kind of media**",
             ['Prose', 'Poetry', 'Anthology'], [])
-    question6 = st.selectbox("**Target Reader Age**",
+  question6 = st.selectbox("**Target Reader Age**",
             ('','Adult','Kids'))
 with col2:
   question1 = st.selectbox("**Fiction or NonFiction?**",
