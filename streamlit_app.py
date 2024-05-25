@@ -84,12 +84,12 @@ features = model_df[['audience_kids','genre_fantasy','genre_scifi','genre_horror
                      'genre_historical','genre_romance','genre_mystery','misc_trans','misc_superhero',
                      'misc_humor','misc_actionadventure', 'misc_realitybased','misc_queer','media_prose','media_graphnovel']].values
 
-#knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
-#knn.fit(features)  # get the model
-#distances, indices = knn.kneighbors(selected_book)
+knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
+knn.fit(features)  # get the model
+distances, indices = knn.kneighbors(selected_book)
  
-#nearest_neighbors_distances = distances[0]
-#nearest_neighbors_data = model_df.iloc[indices[0]]
+nearest_neighbors_distances = distances[0]
+nearest_neighbors_data = model_df.iloc[indices[0]]
   
 #if button_books:
   #st.write(input_df)
