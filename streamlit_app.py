@@ -75,24 +75,26 @@ input_dict = {
   
  #make a df from the input dictionary
 input_df = pd.DataFrame(input_dict, index=[0])
-  
-#start prediction code
-model_df = pd.read_csv('gnp_df.csv')
-  
-features = model_df[['media_prose','media_graphnovel','audience_kids','genre_fantasy', 'genre_horror', 'genre_romance',
-                   'genre_drama', 'genre_historical','genre_scifi','genre_mystery','misc_actionadventure', 'misc_quuer',
-                   'misc_realitybased', 'misc_superhero', 'misc_trans', 'misc_humor']].values
 
-knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
-knn.fit(features)  # get the model
-selected_book = input_df.values.tolist()
-distances, indices = knn.kneighbors(selected_book)
- 
-nearest_neighbors_distances = distances[0]
-nearest_neighbors_data = model_df.iloc[indices[0]]
+st.write(input_df)
+
+#start prediction code
+#model_df = pd.read_csv('gnp_df.csv')
   
-if button_books:
-  st.write(input_df)
+#features = model_df[['media_prose','media_graphnovel','audience_kids','genre_fantasy', 'genre_horror', 'genre_romance',
+  #                 'genre_drama', 'genre_historical','genre_scifi','genre_mystery','misc_actionadventure', 'misc_quuer',
+ #                  'misc_realitybased', 'misc_superhero', 'misc_trans', 'misc_humor']].values
+
+#knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
+#knn.fit(features)  # get the model
+#selected_book = input_df.values.tolist()
+#distances, indices = knn.kneighbors(selected_book)
+ 
+#nearest_neighbors_distances = distances[0]
+#nearest_neighbors_data = model_df.iloc[indices[0]]
+  
+#if button_books:
+  #st.write(input_df)
   #for i, (Title, URL, distance, Summary, Collections, Price) in enumerate(zip(nearest_neighbors_data['Title'], nearest_neighbors_data['URL'], nearest_neighbors_distances, nearest_neighbors_data['Summary'], nearest_neighbors_data['Collections'], nearest_neighbors_data['Price'])):
    # st.header(f" Match {i + 1}: ")
     #st.subheader(f"{Title} \n_{URL}_ {Price}")
