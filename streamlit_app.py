@@ -16,7 +16,7 @@ st.divider()
 col1, col2, col3 = st.columns(3)
 
 with col1:
-  question7= st.multiselect("**What kind of media?**",
+  question7= st.selectbox("**What kind of media?**",
             ['Prose', 'Graphic Novel'], [])
   question6 = st.selectbox("**Target Reader Age**",
             ('','Adult','Kids'))
@@ -75,11 +75,12 @@ input_dict = {
   
  #make a df from the input dictionary
 input_df = pd.DataFrame(input_dict, index=[0])
+selected_book = input_df.values.tolist()
 
-st.write(input_df)
+st.write(selected_book)
 
 #start prediction code
-#model_df = pd.read_csv('gnp_df.csv')
+model_df = pd.read_csv('gnp_df.csv')
   
 #features = model_df[['media_prose','media_graphnovel','audience_kids','genre_fantasy', 'genre_horror', 'genre_romance',
   #                 'genre_drama', 'genre_historical','genre_scifi','genre_mystery','misc_actionadventure', 'misc_quuer',
@@ -87,7 +88,6 @@ st.write(input_df)
 
 #knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
 #knn.fit(features)  # get the model
-#selected_book = input_df.values.tolist()
 #distances, indices = knn.kneighbors(selected_book)
  
 #nearest_neighbors_distances = distances[0]
