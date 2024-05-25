@@ -71,7 +71,7 @@ input_dict = {
   'misc_humor':misc_humor,
   'misc_actionadventure':misc_actionadventure,
   'misc_realitybased':misc_realitybased,
-  'misc_queer':misc_queer'  }
+  'misc_queer':misc_queer}
   
  #make a df from the input dictionary
 input_df = pd.DataFrame(input_dict, index=[0])
