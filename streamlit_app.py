@@ -77,7 +77,7 @@ input_dict = {
 input_df = pd.DataFrame(input_dict, index=[0])
   
 #start prediction code
-df_model = pd.read_csv('gnp_df.csv')
+gnp_df = pd.read_csv('gnp_df.csv')
   
 features = gnp_df[['media_prose','media_graphnovel','audience_kids','genre_fantasy', 'genre_horror', 'genre_romance',
                    'genre_drama', 'genre_historical','genre_scifi','genre_mystery','misc_actionadventure', 'misc_quuer',
