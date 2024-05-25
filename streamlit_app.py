@@ -92,9 +92,10 @@ nearest_neighbors_distances = distances[0]
 nearest_neighbors_data = model_df.iloc[indices[0]]
   
 if button_books:
-  for i, (Title, URL, distance, Summary, Collections, Price) in enumerate(zip(nearest_neighbors_data['Title'], nearest_neighbors_data['URL'], nearest_neighbors_distances, nearest_neighbors_data['Summary'], nearest_neighbors_data['Collections'], nearest_neighbors_data['Price'])):
-    st.header(f" Match {i + 1}: ")
+  st.write(input_df)
+  #for i, (Title, URL, distance, Summary, Collections, Price) in enumerate(zip(nearest_neighbors_data['Title'], nearest_neighbors_data['URL'], nearest_neighbors_distances, nearest_neighbors_data['Summary'], nearest_neighbors_data['Collections'], nearest_neighbors_data['Price'])):
+   # st.header(f" Match {i + 1}: ")
     #st.subheader(f"{Title} \n_{URL}_ {Price}")
-    st.write(f"{Collections}")
-    st.write(f"{Summary}")
-    st.write(" ")
+    #st.write(f"{Collections}")
+  #  st.write(f"{Summary}")
+   # st.write(" ")
