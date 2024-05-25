@@ -73,14 +73,14 @@ input_dict = {
   'misc_realitybased':misc_realitybased,
   'misc_queer':misc_queer}
   
- #make a df from the input dictionary
+#make a df from the input dictionary
 input_df = pd.DataFrame(input_dict, index=[0])
 selected_book = input_df.values.tolist()
 
-st.write(selected_book)
-
 #start prediction code
 model_df = pd.read_csv('gnp_df.csv')
+
+st.write(model_df)
   
 #features = model_df[['media_prose','media_graphnovel','audience_kids','genre_fantasy', 'genre_horror', 'genre_romance',
   #                 'genre_drama', 'genre_historical','genre_scifi','genre_mystery','misc_actionadventure', 'misc_quuer',
