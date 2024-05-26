@@ -21,15 +21,15 @@ with col1:
   question6 = st.selectbox("**Target Reader Age**",
             ('','Adult','Kids'))
 with col2:
-  question1 = st.selectbox("**Replace this box with something else**",
-            ('','Option1', 'Option2'))
+  question1 = st.selectbox("**Fiction or NonFiction?**",
+            ('','Fiction', 'NonFiction'))
   question5 = st.multiselect("**LGBT Representation**",
                ['Queer','#TransRightsReadathon'],[])
 with col3:
   question3 = st.multiselect("**Genre**",
             ['Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'], [])
   question4 = st.multiselect("**Misc Details**",
-               ['Superhero','Humor','Action and Adventure','Reality Based'], [])
+               ['Superhero','Humor','Action and Adventure'], [])
 
 button_books = st.button("Get Books")
 
@@ -50,7 +50,7 @@ misc_superhero = 1 if 'Superhero' in question4 else 0
 misc_trans  = 1 if '#TransRightsReadathon' in question5 else 0
 misc_humor = 1 if 'Humor' in question4 else 0
 misc_actionadventure = 1 if 'Action and Adventure' in question4 else 0
-misc_realitybased = 1 if 'Reality Based' in question4 else 0
+misc_nonfiction = 1 if 'Nonfiction' in question1 else 0
 misc_queer = 1 if 'Queer' in question5 else 0
 
   
@@ -70,7 +70,7 @@ input_dict = {
   'misc_superhero':misc_superhero,
   'misc_humor':misc_humor,
   'misc_actionadventure':misc_actionadventure,
-  'misc_realitybased':misc_realitybased,
+  'misc_nonfiction':misc_nonfiction,
   'misc_queer':misc_queer}
   
 #make a df from the input dictionary
@@ -82,7 +82,7 @@ model_df = pd.read_csv('gnp_df.csv')
   
 features = model_df[['audience_kids','genre_fantasy','genre_scifi','genre_horror','genre_drama',
                      'genre_historical','genre_romance','genre_mystery','misc_trans','misc_superhero',
-                     'misc_humor','misc_actionadventure', 'misc_realitybased','misc_queer','media_prose','media_graphnovel']].values
+                     'misc_humor','misc_actionadventure', 'misc_nonfiction','misc_queer','media_prose','media_graphnovel']].values
 
 knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
 knn.fit(features)  # get the model
