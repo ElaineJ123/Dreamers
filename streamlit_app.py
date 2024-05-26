@@ -50,7 +50,7 @@ misc_superhero = 1 if 'Superhero' in question4 else 0
 misc_trans  = 1 if '#TransRightsReadathon' in question5 else 0
 misc_humor = 1 if 'Humor' in question4 else 0
 misc_actionadventure = 1 if 'Action and Adventure' in question4 else 0
-misc_nonfiction = 1 if 'Nonfiction' in question1 else 0
+misc_nonfiction = 1 if 'NonFiction' in question1 else 0
 misc_queer = 1 if 'Queer' in question5 else 0
 
   
