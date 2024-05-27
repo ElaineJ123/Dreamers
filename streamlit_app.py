@@ -110,7 +110,7 @@ sidebarbox1 = st.sidebar.selectbox(
 )
 sidebarbox2 = st.sidebar.multiselect(
   "Genre",
-  ['','Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'])
+  ['','Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama']
 )
 sidebarbox3 = st.sidebar.selectbox(
     "Fiction or Nonfiction?",
@@ -123,6 +123,10 @@ sidebarbox4 = st.sidebar.selectbox(
 sidebarbox5 = st.sidebar.selectbox(
     "Misc Details",
     ("",'Superhero','Humor','Action and Adventure')
+)
+sidebarbox6 = st.sidebar.selectbox(
+    "LGBT Representation",
+    ("",'Queer','#TransrightsReadathon')
 )
 
 #with st.sidebar:
