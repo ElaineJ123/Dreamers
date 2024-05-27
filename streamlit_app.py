@@ -105,32 +105,26 @@ if button_books:
 st.sidebar.image(image1)
 
 sidebarbox1 = st.sidebar.selectbox(
-    "What media type?",
+    "**What media type?**",
     ("", "Graphic Novel", "Prose")
 )
 sidebarbox2 = st.sidebar.multiselect(
-  "Genre",
+  "**Genre**",
   ['','Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama']
 )
 sidebarbox3 = st.sidebar.selectbox(
-    "Fiction or Nonfiction?",
+    "**Fiction or Nonfiction?**",
     ("","Fiction", "NonFiction")
 )
 sidebarbox4 = st.sidebar.selectbox(
-    "Target Reader Age",
+    "**Target Reader Age**",
     ("","Kids", "Adult")
 )
-sidebarbox5 = st.sidebar.selectbox(
-    "Misc Details",
-    ("",'Superhero','Humor','Action and Adventure')
+sidebarbox5 = st.sidebar.multiselect(
+    "**Misc Details**",
+    ["",'Superhero','Humor','Action and Adventure']
 )
-sidebarbox6 = st.sidebar.selectbox(
-    "LGBT Representation",
-    ("",'Queer','#TransrightsReadathon')
+sidebarbox6 = st.sidebar.multiselect(
+    "**LGBT Representation**",
+    ["",'Queer','#TransrightsReadathon']
 )
-
-#with st.sidebar:
-#    add_radio = st.radio(
-#        "Choose an option",
-#        ("Standard (5-15 days)", "Express (2-5 days)")
-#    )
