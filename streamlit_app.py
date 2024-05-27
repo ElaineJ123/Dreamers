@@ -127,4 +127,4 @@ sidebarbox6 = st.sidebar.multiselect(
     ["",'Queer','#TransrightsReadathon']
 )
 
-st.sidebar.button("Get Books")
+button_sidebooks = st.sidebar.button("Get Recommendations")
