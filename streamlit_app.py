@@ -99,10 +99,8 @@ if button_books:
     st.write(f"{Summary}")
     st.write(" ")
 
-
 #sidebar testing info
-
-st.sidebar.image(image1)
+#st.sidebar.image(image1)
 
 sidebarbox1 = st.sidebar.selectbox(
     "**What media type?**",
