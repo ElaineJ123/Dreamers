@@ -105,12 +105,28 @@ if button_books:
 st.sidebar.image(image1)
 
 add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
+    "What media type?",
+    ("", "Graphic Novel", "Prose")
+)
+add_selectbox = st.sidebar.selectbox(
+    "Genre",
+    ("",'Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama')
+)
+add_selectbox = st.sidebar.selectbox(
+    "Fiction or Nonfiction?",
+    ("","Fiction", "NonFiction")
+)
+add_selectbox = st.sidebar.selectbox(
+    "Target Reader Age",
+    ("","Kids", "Adult")
+)
+add_selectbox = st.sidebar.selectbox(
+    "Misc Details",
+    ("",'Superhero','Humor','Action and Adventure')
 )
 
-with st.sidebar:
-    add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-    )
+#with st.sidebar:
+#    add_radio = st.radio(
+#        "Choose an option",
+#        ("Standard (5-15 days)", "Express (2-5 days)")
+#    )
