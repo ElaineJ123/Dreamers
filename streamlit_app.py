@@ -104,23 +104,23 @@ if button_books:
 
 st.sidebar.image(image1)
 
-add_selectbox = st.sidebar.selectbox(
+sidebarbox1 = st.sidebar.selectbox(
     "What media type?",
     ("", "Graphic Novel", "Prose")
 )
-add_selectbox = st.sidebar.multiselect(("Genre",
-            ['Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'], [])
+sidebarbox2 = st.sidebar.multiselect(
+  "Genre",
+  ['','Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'])
 )
-
-add_selectbox = st.sidebar.selectbox(
+sidebarbox3 = st.sidebar.selectbox(
     "Fiction or Nonfiction?",
     ("","Fiction", "NonFiction")
 )
-add_selectbox = st.sidebar.selectbox(
+sidebarbox4 = st.sidebar.selectbox(
     "Target Reader Age",
     ("","Kids", "Adult")
 )
-add_selectbox = st.sidebar.selectbox(
+sidebarbox5 = st.sidebar.selectbox(
     "Misc Details",
     ("",'Superhero','Humor','Action and Adventure')
 )
