@@ -108,7 +108,7 @@ add_selectbox = st.sidebar.selectbox(
     "What media type?",
     ("", "Graphic Novel", "Prose")
 )
-add_selectbox = st.sidebar.multiselect("**Genre**",
+add_selectbox = st.sidebar.multiselect(("**Genre**",
             ['Fantasy', 'Romance', 'Sci-Fi', 'Mystery','Historical','Horror', 'Drama'], [])
 )
 
