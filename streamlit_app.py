@@ -17,7 +17,7 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
   question7= st.selectbox("**What kind of media?**",
-            ('','Prose', 'Graphic Novel'))
+            ('','Prose', 'Illustrated Prose','Graphic Novel','Comics','Picture Books','Manga','Board Books'))
   question6 = st.selectbox("**Target Reader Age**",
             ('','Adult','Kids'))
 with col2:
