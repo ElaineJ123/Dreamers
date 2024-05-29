@@ -84,7 +84,7 @@ input_df = pd.DataFrame(input_dict, index=[0])
 selected_book = input_df.values.tolist()
 
 #start prediction code
-model_df = pd.read_csv('gnp_df.csv')
+model_df = pd.read_csv('dreamer_df.csv')
   
 features = model_df[['media_prose','media_graphnovel','audience_kids','genre_fantasy','genre_horror','genre_romance','genre_drama',
                     'genre_historical','genre_scifi','genre_mystery','misc_trans','misc_superhero',
