@@ -36,8 +36,11 @@ button_books = st.button("Get Books")
 st.divider()
 
   # Update values for recommendation
-media_prose = 1 if 'Prose' in question7 else 0
+media_prose = 1 if any(item in ['Prose', 'Illustrated Prose'] for item in question7) else 0 
 media_graphnovel = 1 if 'Graphic Novel' in question7 else 0
+media_picture = 1 if any(item in ['Picture Books', 'Board Books'] for item in question7) else 0 
+media_manga = 1 if 'Manga' in question7 else 0
+media_comics = 1 if 'Comics' in question7 else 0
 audience_kids = 1 if question6 =='Kids' else 0
 genre_fantasy = 1 if 'Fantasy' in question3 else 0
 genre_horror = 1 if 'Horror' in question3 else 0
@@ -71,7 +74,10 @@ input_dict = {
   'misc_humor':misc_humor,
   'misc_actionadventure':misc_actionadventure,
   'misc_nonfiction':misc_nonfiction,
-  'misc_queer':misc_queer}
+  'misc_queer':misc_queer,
+  'media_manga':media_manga,
+  'media_comics':media_comics,
+  'media_picture':media_picture}
   
 #make a df from the input dictionary
 input_df = pd.DataFrame(input_dict, index=[0])
@@ -82,7 +88,8 @@ model_df = pd.read_csv('gnp_df.csv')
   
 features = model_df[['media_prose','media_graphnovel','audience_kids','genre_fantasy','genre_horror','genre_romance','genre_drama',
                     'genre_historical','genre_scifi','genre_mystery','misc_trans','misc_superhero',
-                    'misc_humor','misc_actionadventure','misc_nonfiction','misc_queer']].values
+                    'misc_humor','misc_actionadventure','misc_nonfiction','misc_queer','media_manga',
+                    'media_comics','media_picture']].values
 
 knn = NearestNeighbors(n_neighbors=10, metric='euclidean')
 knn.fit(features)  # get the model
